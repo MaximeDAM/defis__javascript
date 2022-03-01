@@ -1,0 +1,13 @@
+{
+  "name": "joeblow",
+  "version": "1.0.0",
+  "description": "Joe Blow's web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass devinerNombre/sass/style.scss:devinerNombre/cssDist/style.min.css -w --style compressed",
+    "prefix": "postcss devinerNombre/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

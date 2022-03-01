@@ -1,0 +1,63 @@
+$color-primary: black;
+$color-secondary: green;
+$color-tertiary: #ae0f0f;
+$color-accent: #FFF;
+
+$color-mod: (orange: #cc8624, rose: #cc2475, bleu: #2469cc, vert: #24cc24 );
+
+@mixin color-mod($colors){
+  @each $state, $color in $colors{
+    .article__heading--/*colour name goes here*/ {
+  color: map-get($color);
+}
+  }
+}
+
+$font-size: (
+  big: 4rem,
+  medium: 2rem,
+  normal: 1rem,
+  small: 0.5rem
+);
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: map-get($font-size, big);
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  input {
+    font-size: map-get($font-size, big);
+    width: 50%;
+  }
+  &__answer {
+    color: blue;
+  }
+  &__nbTry {
+    color: $color-secondary;
+    font-weight: bold;
+  }
+  &__btn {
+    font-size: map-get($font-size, big);
+    margin-left: 1rem;
+    padding: 0.6rem;
+    &:first-of-type {
+      border: 0.1rem solid $color-secondary;
+      border-radius: 0.5rem;
+      background-color: #82f985;
+      color: $color-secondary;
+      font-weight: bold;
+    }
+    &:last-of-type {
+      border: 0.1rem solid $color-tertiary;
+      border-radius: 0.5rem;
+      background-color: #ff7e67;
+      color: $color-tertiary;
+      font-weight: bold;
+    }
+  }
+}
